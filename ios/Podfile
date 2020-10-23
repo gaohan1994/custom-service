@@ -8,6 +8,8 @@ target 'CService' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNAudio', :path => '../node_modules/react-native-audio'
+
   target 'CServiceTests' do
     inherit! :complete
     # Pods for testing

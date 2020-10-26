@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
-import Sound from './component/audio';
+import Audio from './component/audio';
+import AudioRecord from './component/audio-record';
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <SafeAreaView style={{flex: 1}}>
         <View style={styles.container}>
           <Text>asd</Text>
-          <Sound />
+          {/* <Sound /> */}
+          <AudioRecord />
         </View>
       </SafeAreaView>
     </>

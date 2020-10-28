@@ -296,6 +296,15 @@ PODS:
     - React-Core (= 0.63.3)
     - React-cxxreact (= 0.63.3)
     - React-jsi (= 0.63.3)
+  - ReactNativeNavigation (7.2.0):
+    - React-Core
+    - React-RCTImage
+    - React-RCTText
+    - ReactNativeNavigation/Core (= 7.2.0)
+  - ReactNativeNavigation/Core (7.2.0):
+    - React-Core
+    - React-RCTImage
+    - React-RCTText
   - RNAudio (4.3.0):
     - React
   - RNAudioRecord (0.2.2):
@@ -356,6 +365,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - RNAudio (from `../node_modules/react-native-audio`)
   - RNAudioRecord (from `../node_modules/react-native-audio-record`)
   - RNSound (from `../node_modules/react-native-sound`)
@@ -427,6 +437,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  ReactNativeNavigation:
+    :path: "../node_modules/react-native-navigation"
   RNAudio:
     :path: "../node_modules/react-native-audio"
   RNAudioRecord:
@@ -473,12 +485,13 @@ SPEC CHECKSUMS:
   React-RCTText: 65a6de06a7389098ce24340d1d3556015c38f746
   React-RCTVibration: 8e9fb25724a0805107fc1acc9075e26f814df454
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
+  ReactNativeNavigation: 2f6571c37eaeb7d472fe8a3779d49d7aae32e75a
   RNAudio: cae2991f2dccb75163f260b60da8051717b959fa
   RNAudioRecord: 162fee3b8fb628773ec704bf0333823125be2ed7
   RNSound: da030221e6ac7e8290c6b43f2b5f2133a8e225b0
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: bafcb7eeed066281156a3d65227eb1d2301d0fd9
+PODFILE CHECKSUM: ad6e41877f9afd9e525bd5fcf8b4b1b1345dbe08
 
 COCOAPODS: 1.9.3

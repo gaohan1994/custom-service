@@ -3,14 +3,18 @@
  * @Author: centerm.gaohan
  * @Date: 2020-10-23 14:45:23
  * @Last Modified by: centerm.gaohan
- * @Last Modified time: 2020-10-26 12:00:58
+ * @Last Modified time: 2020-10-28 09:55:29
  */
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import AudioRecord from 'react-native-audio-record';
 import {Toast} from 'teaset';
 
-const Audio = () => {
+const Audio = (props) => {
+  /**
+   * @param {onRecordData} 监控数据
+   */
+  const {onRecordData} = props;
   // 当前录音状态 record stop
   const [recordStatus, setRecordStatus] = useState('');
 
@@ -25,10 +29,16 @@ const Audio = () => {
     };
     AudioRecord.init(options);
 
+    /**
+     * 捕捉用户输入的语音之后调用外部接口
+     */
     AudioRecord.on('data', (data) => {
       console.log('data', data);
+      if (onRecordData) {
+        onRecordData(data);
+      }
     });
-  }, []);
+  });
 
   useEffect(() => {
     // 开始录音
